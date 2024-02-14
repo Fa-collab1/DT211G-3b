@@ -1,12 +1,12 @@
 $background-color: aquamarine;
-$primary-color: #333;
-$secondary-color: #fff;
-$text-color: purple;
+$headfoot-color: #333;
+$headfoot_text-color: #fff;
+$text-color: rgb(46, 10, 46);
 
-$background-color-darkmode: #333;
-$primary-color-darkmode: lightblue;
-$secondary-color-darkmode: #333;
-$text-color-darkmode:white;
+$background-color-darkmode: invert($background-color);
+$headfoot-color-darkmode:invert($headfoot-color);
+$headfoot_text-color-darkmode:invert($headfoot_text-color);
+$text-color-darkmode:invert($text-color);
 
 :root
 {
@@ -30,41 +30,56 @@ body {
 .pagecontent {
 min-height: 95.5vh;
 }
-
-
 header, footer {
-    background-color:$primary-color;
     text-align: center;
     padding: 1em;
-}
-
-header, header *, footer, footer * {
-    background-color:$primary-color;
-    color: $secondary-color;
-}
-
-
-footer {
+  
+    *, & {
+      background-color: $headfoot-color;
+      color: $headfoot_text-color;
+    }
+  
+    nav {
+      ul {
+        list-style-type: none;
+        padding: 0;
+  
+        li {
+          display: inline;
+          margin: 0 15px;
+  
+          a {
+            text-decoration: none;
+            font-size: 2em;
+            font-weight: bold;
+            padding: 1em;
+            border-radius: 50%;
+  
+            &:hover {
+              background-color: lighten($headfoot-color, 10%);
+              text-decoration: underline;
+            }
+  
+            &:active {
+              background-color: lighten($headfoot-color, 30%);
+              text-decoration: underline;
+              color: invert($headfoot_text-color);
+            }
+          }
+  
+          .activepagemarker {
+            border: $headfoot_text-color 2px solid;
+          }
+        }
+      }
+    }
+  }
+  
+  footer {
     max-height: 4.5vh;
-}
+  }
+  
 
-nav ul {
-    
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-size: 2em;
-    font-weight: bold;
-}
 
 main {
 
@@ -86,8 +101,24 @@ main {
     }
 
     header, header *, footer, footer * {
-        background-color:$primary-color-darkmode;
-        color: $secondary-color-darkmode;
+        background-color:$headfoot-color-darkmode;
+        color: $headfoot_text-color-darkmode;
+    
+    }
+
+    .activepagemarker {
+        border:$headfoot_text-color-darkmode 2vw solid;
+        border-style:solid;
+    }
+        
+    nav ul li *:hover {
+        background-color: darken($headfoot-color-darkmode, 10%);
+    }
+    
+    nav ul li *:active{
+        background-color: darken($headfoot-color-darkmode, 30%);
+        color: invert($headfoot_text-color-darkmode);
+
     }
     
     
