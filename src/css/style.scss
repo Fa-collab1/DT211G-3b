@@ -1,0 +1,74 @@
+
+:root
+{
+    --primary-color: #333;
+    --secondary-color: #fff;
+    --text-color: purple;
+    background-color: aquamarine;
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        --primary-color: lightblue;
+        --secondary-color: #333;
+        --text-color:lightgreen;
+        background-color: #333;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--text-color);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.pagecontent {
+min-height: 95.5vh;
+}
+
+
+header, footer {
+    background-color:var(--primary-color);
+    text-align: center;
+    padding: 1em;
+}
+
+footer {
+    max-height: 4.5vh;
+}
+
+nav ul {
+    background-color:var(--primary-color);
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+
+}
+
+nav ul li a {
+    background-color:var(--primary-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
