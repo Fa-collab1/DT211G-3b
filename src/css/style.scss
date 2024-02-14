@@ -12,7 +12,7 @@ $text-color-darkmode:invert($text-color);
 {
     background-color: $background-color;
     color: $text-color;
-
+    
 }
 
 
@@ -111,15 +111,17 @@ main {
         border-style:solid;
     }
         
-    nav ul li *:hover {
-        background-color: darken($headfoot-color-darkmode, 10%);
-    }
+    nav ul li {
+        &:hover {
+            background-color: darken($headfoot-color-darkmode, 10%);
+        }
     
-    nav ul li *:active{
-        background-color: darken($headfoot-color-darkmode, 30%);
-        color: invert($headfoot_text-color-darkmode);
-
+        &:active {
+            background-color: darken($headfoot-color-darkmode, 30%);
+            color: invert($headfoot_text-color-darkmode);
+        }
     }
     
     
 }
+
