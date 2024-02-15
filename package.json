@@ -1,24 +1,28 @@
 {
-  "name": "dt211g-3b",
+"name": "dt211g-3",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Moment 3 i kursen DT2111G VT2024 (MiUn)",
+  "source": "src/index.html",
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "automation"
+  ],
+  "author": "joni2307",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.11.0",
-    "netlify-cli": "^17.16.2",
+    "netlify-cli": "^17.15.1",
     "parcel": "^2.11.0",
-    "sass": "^1.70.0",
     "sharp": "^0.31.3"
   },
-  "parcel": {
-    "sourceMap": true
-  }
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead",
+    "not IE 11"
+  ]
 }
+
