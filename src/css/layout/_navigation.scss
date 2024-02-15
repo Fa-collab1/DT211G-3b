@@ -1,5 +1,12 @@
 // Basstil för navigationsmeny
+.activepagemarker {
+    border: $headfoot_text-color 2px solid; // Stil för aktiv sida
+}
+
+
+
 nav {
+
     ul {
         list-style-type: none; // Avlägsnar standardstil för lista
         padding: 0;
@@ -22,14 +29,12 @@ nav {
                 }
 
                 &:active {
+                    @extend .activepagemarker; // Aktiv länk
                     background-color: lighten($headfoot-color, 50%) !important; // Aktiv länkeffekt
                     color: invert($headfoot_text-color);
                 }
             }
 
-            .activepagemarker {
-                border: $headfoot_text-color 2px solid; // Stil för aktiv sida
-            }
         }
     }
 }
