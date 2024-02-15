@@ -1,12 +1,14 @@
-$background-color: aquamarine;
-$headfoot-color: #333;
+$background-color: rgb(193, 247, 229);
+$headfoot-color: #5b4242;
 $headfoot_text-color: #fff;
 $text-color: rgb(46, 10, 46);
+$picture_border_color:black; 
 
 $background-color-darkmode: invert($background-color);
 $headfoot-color-darkmode:invert($headfoot-color);
 $headfoot_text-color-darkmode:invert($headfoot_text-color);
 $text-color-darkmode:invert($text-color);
+
 
 :root
 {
@@ -14,6 +16,46 @@ $text-color-darkmode:invert($text-color);
     color: $text-color;
     
 }
+
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    margin: 0.5em;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 0.5em;
+}
+
+
+.pictureGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+picture {
+    img {
+border: $picture_border_color solid 3px;    
+transition: filter 100s ease;
+
+  &:hover {
+    filter: hue-rotate(7200deg);
+  }
+}
+
+
+}
+
+
+
+
+}
+
 
 
 * {
@@ -55,14 +97,15 @@ header, footer {
             padding: 1vw;
             margin: 1vw;
             border-radius: 50%;
+            background-color: lighten($headfoot-color, 10%) !important;
   
             &:hover {
-              background-color: lighten($headfoot-color, 10%);
+              background-color: lighten($headfoot-color, 30%) !important;
               text-decoration: underline;
             }
   
             &:active {
-              background-color: lighten($headfoot-color, 30%);
+              background-color: lighten($headfoot-color, 50%) !important;
               text-decoration: underline;
               color: invert($headfoot_text-color);
             }
@@ -94,35 +137,17 @@ main {
         color: $text-color-darkmode;
     }
 
-    header, header *, footer, footer * {
-        background-color:$headfoot-color-darkmode;
-        color: $headfoot_text-color-darkmode;
-    
-    }
-
-    .activepagemarker {
-        border:$headfoot_text-color-darkmode 2vw solid;
-        border-style:solid;
-    }
-        
-    nav ul li {
-        &:hover {
-            background-color: darken($headfoot-color-darkmode, 10%);
-        }
-    
-        &:active {
-            background-color: darken($headfoot-color-darkmode, 30%);
-            color: invert($headfoot_text-color-darkmode);
-        }
-    }
+      
     
     
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   
     nav ul li a {
+        display: block;
         padding: 0.7vw !important;
+        margin: 0 30% 0 30% !important;
         font-size: 1.5em !important;
     }
 }
