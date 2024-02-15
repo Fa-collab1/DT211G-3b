@@ -1,5 +1,5 @@
 {
-"name": "dt211g-3",
+  "name": "dt211g-3",
   "version": "1.0.0",
   "description": "Moment 3 i kursen DT2111G VT2024 (MiUn)",
   "source": "src/index.html",
@@ -14,8 +14,10 @@
   "author": "joni2307",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.11.0",
     "netlify-cli": "^17.15.1",
     "parcel": "^2.11.0",
+    "sass": "^1.70.0",
     "sharp": "^0.31.3"
   },
   "browserslist": [
@@ -25,4 +27,3 @@
     "not IE 11"
   ]
 }
-
