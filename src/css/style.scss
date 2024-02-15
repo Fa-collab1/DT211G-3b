@@ -105,6 +105,7 @@ header, footer {
             }
   
             &:active {
+                @extend .activepagemarker;
               background-color: lighten($headfoot-color, 50%) !important;
               text-decoration: underline;
               color: invert($headfoot_text-color);
