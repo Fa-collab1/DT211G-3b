@@ -1,3 +1,6 @@
 {
-  "entries": "src/index.html"
-}
+    "extends": "@parcel/config-default",
+    "transformers": {
+      "*.{jpg,png,webp}": ["@parcel/transformer-image"]
+    }
+  }
