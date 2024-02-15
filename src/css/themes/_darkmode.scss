@@ -1,0 +1,11 @@
+// Stöd för mörkt läge baserat på användarens systeminställningar
+@media (prefers-color-scheme: dark) {
+    * {
+        background-color: $background-color-darkmode; // Anpassar bakgrundsfärgen för alla element
+        color: $text-color-darkmode; // Anpassar textfärgen för alla element
+    }
+
+    .sessCheesPictureGallery {
+        border: solid 0.2vw $background-color-darkmode !important; // Specifik stil för bildgalleriet i mörkt läge
+    }
+}

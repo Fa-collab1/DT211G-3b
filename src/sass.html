@@ -5,32 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SASS</title>
-    <link rel="stylesheet" href="css/style.scss">
+    <link rel="stylesheet" href="css/main.scss">
     <script src="js/js.js" defer></script>
-    
+
 </head>
 
 <body>
-    <section class="pagecontent">
-        <header>
-            <nav id="main-nav">
-                <ul>
-                    <li><a href="index.html">Hem</a></li>
-                    <li><a href="sass.html" class="activepagemarker">SASS</a></li>
-                    <li><a href="#">Animering</a></li>
-                    <li><a href="#">Diagram</a></li>
-                    <li><a href="#">Karta</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
+    <main>
+        <div class="pagecontent">
+            <header>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Hem</a></li>
+                        <li><a href="sass.html" class="activepagemarker">SASS</a></li>
+                        <li><a href="#">Animering</a></li>
+                        <li><a href="#">Diagram</a></li>
+                        <li><a href="#">Karta</a></li>
+                    </ul>
+                </nav>
+            </header>
+
             <section class="ingress">
                 <h1>Utvärdering av mitt arbete med SASS</h1>
                 <p>Genom att använda SASS nu för första gången så har jag stött på flera fördelar och några nackdelar.
                 </p>
             </section>
-            <section id="sessContainer">
-                <div class="sessCheesPictureGallery">
+            <div id="sassContainer">
+                <div class="sassCheesPictureGallery">
                     <picture>
                         <!-- AVIF format -->
                         <source srcset="pics/ost1.png?as=avif&width=320 320w,
@@ -106,7 +107,7 @@
                         <img src="pics/ost5.png?width=800" id="imageCheesePlate5" alt="ostbricka 5"
                             title="ostbricka 5" />
                     </picture>
-                    
+
                     <picture>
                         <!-- AVIF format -->
                         <source srcset="pics/ost7.png?as=avif&width=320 320w,
@@ -133,7 +134,7 @@
                             title="ostbricka 7" />
                     </picture>
                 </div>
-                <section id="sessText">
+                <div id="sassText">
                     <section>
                         <h2>Fördelar med SASS</h2>
                         <p>En av de mest framträdande fördelarna med SASS är möjligheten att använda variabler för att
@@ -166,7 +167,10 @@
                             till vanlig CSS, men det går ju faktiskt smidigt att sätta upp Parcel etc. (men jag kan väl
                             inte
                             säga att jag ritkigt förstår vad som händer egentligen mer än att det fungerar)</p>
-                            <p>Variablerna kändes inte helt varierbara, de låses vid kompilering så det känns som om det finns många tillfällen som man hellre vill använda de "vanliga" css-variablerna. Jag tror att det hade varit smartare använda sig av de vanliga css-variablerna för färgförändringarna vid ljust och mörkt läge t.ex.</p>
+                        <p>Variablerna kändes inte helt varierbara, de låses vid kompilering så det känns som om det
+                            finns många tillfällen som man hellre vill använda de "vanliga" css-variablerna. Jag tror
+                            att det hade varit smartare använda sig av de vanliga css-variablerna för färgförändringarna
+                            vid ljust och mörkt läge t.ex.</p>
 
                         <section>
                             <h2>Lärdomar och utmaningar</h2>
@@ -182,15 +186,19 @@
                                 och
                                 så kanske det blir onödigt komplicerat istället för att det förenklar. Men det som
                                 fastnar mest av denna övning är att det här ska det bli kul att lära sig mer om!</p>
-                                <p>*) Bilderna är AI-genererade</p>
+                            <p>Nästa gång så ska jag börja med partialsstrukturen. Den borde bli bättre om man tänker
+                                rätt från början. Nu började jag titta på den biten sist av allt, det var inte helt
+                                smart.</p>
+                            <p>*) Bilderna är AI-genererade</p>
+
                         </section>
                     </section>
 
-                    </div>
 
 
-                </section>
-                <div class="sessCheesPictureGallery">
+
+                </div>
+                <div class="sassCheesPictureGallery">
                     <picture>
                         <!-- AVIF format -->
                         <source srcset="pics/ost2.png?as=avif&width=320 320w,
@@ -266,7 +274,7 @@
                         <img src="pics/ost6.png?width=800" id="imageCheesePlate6" alt="ostbricka 6"
                             title="ostbricka 6" />
                     </picture>
-                    
+
                     <picture>
                         <!-- AVIF format -->
                         <source srcset="pics/ost8.png?as=avif&width=320 320w,
@@ -295,8 +303,10 @@
                 </div>
 
 
-            </section>
-        </main>
+            </div>
+
+
+        </div>
 
         <footer>
             <p>&copy; 2024 Jonas Nilsson</p>
@@ -305,6 +315,7 @@
             <button type="button" id="helpButton">Hjälp!</button>
             <button type="button" id="geeseButton">Gåsattack!</button>
         </footer>
+    </main>
 </body>
 
 </html>

@@ -1,0 +1,21 @@
+header,
+footer {
+    text-align: center;
+    padding: 1em;
+
+    *,
+    & {
+        background-color: $headfoot-color;
+        color: $headfoot_text-color;
+    }
+
+}
+
+footer {
+    max-height: 4.5vh;
+
+    * {
+        display: inline-block;
+        margin: 0;
+    }
+}

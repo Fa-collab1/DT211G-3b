@@ -1,0 +1,52 @@
+// Basstil för navigationsmeny
+nav {
+    ul {
+        list-style-type: none; // Avlägsnar standardstil för lista
+        padding: 0;
+
+        li {
+            display: inline; // Arrangerar menylänkar horisontellt
+            margin: 0 3vw;
+
+            a {
+                text-decoration: none; // Stil för menylänkar: ingen understrykning, storlek, fetstil
+                font-size: 2.5vw;
+                font-weight: bold;
+                padding: 1vw;
+                margin: 1vw;
+                border-radius: 50%;
+                background-color: lighten($headfoot-color, 10%) !important;
+
+                &:hover {
+                    background-color: lighten($headfoot-color, 30%) !important; // Hovereffekt för länkar
+                }
+
+                &:active {
+                    background-color: lighten($headfoot-color, 50%) !important; // Aktiv länkeffekt
+                    color: invert($headfoot_text-color);
+                }
+            }
+
+            .activepagemarker {
+                border: $headfoot_text-color 2px solid; // Stil för aktiv sida
+            }
+        }
+    }
+}
+
+// Anpassningar för responsiv design
+@media (max-width: 800px) {
+    nav ul li a {
+        display: block; // Gör länkarna block-element för mindre skärmar
+        padding: 0.7vw !important;
+        margin: 0 30% 0 30% !important;
+        font-size: 1.5em !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    nav ul li a {
+        font-size: 1em !important; // Minskar fontstorleken för ännu mindre skärmar
+        margin: 0 !important;
+    }
+}

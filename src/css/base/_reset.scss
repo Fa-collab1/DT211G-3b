@@ -1,0 +1,16 @@
+:root {
+    background-color: $background-color; // Webbplatsens bakgrundsfärg.
+    color: $text-color; // Webbplatsens textfärg.
+    font-size: 1.3em; // Basfontstorlek.
+}
+
+* {
+    box-sizing: border-box; // Inkluderar padding och border i elementens totala bredd/höjd.
+    max-width: 100vw; // Maxbredd = viewportens bredd.
+}
+
+body {
+    font-family: Arial, sans-serif; // Typsnitt.
+    margin: 0; // Ingen marginal.
+    padding: 0; // Ingen padding.
+}

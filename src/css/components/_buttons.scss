@@ -1,0 +1,25 @@
+#duckButton {
+    @include buttonRandomColor;
+}
+
+#ducksButton {
+    @include buttonRandomColor;
+}
+
+#helpButton {
+    @include buttonRandomColor;
+}
+
+#geeseButton {
+    @include buttonRandomColor(2);
+}
+
+button:hover {
+    transform: scale(1.16);
+
+}
+
+button:active {
+    transform: scale(1.3);
+
+}

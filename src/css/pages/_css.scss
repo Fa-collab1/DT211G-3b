@@ -1,0 +1,164 @@
+// Anger minsta höjd för sidans innehållsområde.
+.pagecontent {
+    min-height: 95.5vh;
+}
+
+// Lägger till padding runt huvudinnehållet.
+main {
+    padding: 0.2vw;
+}
+
+// Stilinställningar för huvud- och underrubriker.
+h1 {
+    font-size: 3em;
+    margin: 0.5em;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 0.5em;
+}
+
+// Centrerar inledningstext och lägger till bottenpadding.
+.ingress {
+    text-align: center;
+    padding-bottom: 3vh;
+}
+
+// Flexbox-layout för bildgalleriet, inklusive styling av bilder.
+.pictureGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    picture {
+        img {
+            border: $picture_border_color solid 3px;
+        }
+    }
+}
+
+// Individuella hover-effekter för varje bild genom en mixin.
+#image1:hover {
+    @include randomPictureEffect;
+}
+
+#image2:hover {
+    @include randomPictureEffect;
+}
+
+#image3:hover {
+    @include randomPictureEffect;
+}
+
+#image4:hover {
+    @include randomPictureEffect;
+}
+
+#image5:hover {
+    @include randomPictureEffect;
+}
+
+#image6:hover {
+    @include randomPictureEffect;
+}
+
+#imageCheesePlate1:hover {
+    @include randomPictureEffect;
+}
+
+#imageCheesePlate2:hover {
+    @include randomPictureEffect;
+}
+
+#imageCheesePlate3:hover {
+    @include randomPictureEffect;
+}
+
+#imageCheesePlate4:hover {
+    @include randomPictureEffect;
+}
+
+#imageCheesePlate5:hover {
+    @include randomPictureEffect;
+}
+
+#imageCheesePlate6:hover {
+    @include randomPictureEffect;
+}
+
+#imageCheesePlate7:hover {
+    @include randomPictureEffect;
+}
+
+#imageCheesePlate8:hover {
+    @include randomPictureEffect;
+}
+
+// Flex-container för ytterligare innehåll med stilinställningar.
+#sassContainer {
+    display: flex; // Använder flexbox-layout för att arrangera barn-element flexibelt.
+    justify-content: center; // Centrerar barn-element horisontellt i containern.
+    align-items: center; // Centrerar barn-element vertikalt i containern.
+    gap: 1vw; // Skapar ett utrymme mellan barn-elementen.
+    margin: 1vw; // Sätter en yttre marginal runt containern.
+    padding: 1vw; // Sätter en inre marginal (padding) runt innehållet i containern.
+    background-color: #f0f0f0; 
+    border-radius: 1em; 
+    box-shadow: 0 0 1em 0.5em #f0f0f0; 
+    max-width: 100%; // Säkerställer att containern inte blir bredare än föräldraelementet.
+    overflow: hidden; // Döljer innehåll som sträcker sig utanför containerns gränser.
+
+    img {
+        max-width: 100%; 
+        max-height: 100%;
+        padding: 0; 
+        margin: 0; 
+    }
+
+    #sassText {
+        padding: 1em; 
+        min-width: 50%;
+    }
+
+    .sassCheesPictureGallery {
+        max-width: 20%; // Begränsar galleriets maximala bredd till 20% av föräldraelementet.
+        margin: 0; 
+        padding: 0; 
+        border: solid 0.2vw $background-color; 
+    }
+}
+
+
+// Initialt döljer vissa bilder och visar dem vid specifika skärmstorlekar.
+#imageCheesePlate5,
+#imageCheesePlate6,
+#imageCheesePlate7,
+#imageCheesePlate8 {
+    display: none;
+}
+
+@media (max-width: 1800px) {
+
+    #imageCheesePlate5,
+    #imageCheesePlate6 {
+        display: block;
+    }
+}
+
+@media (max-width: 1500px) {
+
+    #imageCheesePlate7,
+    #imageCheesePlate8 {
+        display: block;
+    }
+}
+
+@media (max-width: 1000px) {
+    .sassCheesPictureGallery {
+        display: none;
+    }
+}

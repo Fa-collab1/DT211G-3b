@@ -1,0 +1,39 @@
+//bildeffekter, 3 möjligt slumpas fram vilken det blir
+@mixin randomPictureEffect {
+
+
+    $randomvalue: random(3);
+
+    @if $randomvalue ==1 {
+        transition: filter 2s ease;
+        filter: saturate(2000%);
+    }
+
+    @else if $randomvalue ==2 {
+        transition: filter 2s ease;
+        filter: sepia(100%);
+    }
+
+    @else {
+        transition: filter 100s ease;
+        filter: hue-rotate(7200deg);
+    }
+}
+
+//knappar med random färg. Knapptyp 1 är utan border och standard. Knapptyp 2 är med border.
+@mixin buttonRandomColor($buttonType1or2: 1) {
+
+    background-color: hsl(random(360), 30%, 30%);
+    cursor: pointer;
+    margin: 5px;
+    display: inline-block;
+
+    @if $buttonType1or2 ==1 {
+        border: none;
+    }
+
+    @else {
+        border: solid 2px black;
+
+    }
+}
