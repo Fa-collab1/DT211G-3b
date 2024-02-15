@@ -1,236 +1,204 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsiv Webbplats</title>
+    <title>Ostätande</title>
     <link rel="stylesheet" href="css/style.scss">
     <script src="js/js.js" defer></script>
-</head>
+    </head>
+    
+
 <body>
     <section class="pagecontent">
-    <header>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="#" class="activepagemarker">Hem</a></li>
-                <li><a href="#">SASS</a></li>
-                <li><a href="#">Animering</a></li>
-                <li><a href="#">Diagram</a></li>
-                <li><a href="#">Karta</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h1>Ostätande</h1>
+        <header>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html" class="activepagemarker">Hem</a></li>
+                    <li><a href="sass.html">SASS</a></li>
+                    <li><a href="#">Animering</a></li>
+                    <li><a href="#">Diagram</a></li>
+                    <li><a href="#">Karta</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="ingress">
+                <h1>Ostätande</h1>
+                <p>
+                    Upplev vår unika samling av konstverk som fångar människor som njuter av den älskade delikatessen -
+                    ost! Från de praktfulla slotten i det Heliga Romerska riket till de lantliga gårdarna på den tyska
+                    landsbygden, har ostens njutning en rik historia i dessa historiska miljöer.
+                </p>
+                <p>
+                    Bläddra igenom vårt galleri och upptäck olika scenarier där ost spelar huvudrollen. Från kungliga
+                    banketter till böndernas marknader, sträcker sig våra bilder över olika samhällsklasser och
+                    historiska perioder. Varje bild fångar den unika glädjen och njutningen av att ta en tugga av en
+                    välsmakande ostbit.
+                </p>
+                <p>
+                    Vi hoppas att du kommer att njuta av denna resa genom ostens värld och låta dig inspireras att skapa
+                    dina egna minnen kring denna utsökta delikatess. Oavsett om du är en ostentusiast eller nybörjare,
+                    finns det alltid plats för mer ost i ditt liv!
+                </p>
+            </section>
+
+
             <h2>Liknande en känd person</h2>
             <div class="pictureGallery">
-            <picture>
-                <!-- AVIF format -->
-                <source 
-                    srcset="pics/m1.png?as=avif&width=320 320w,
+                <picture>
+                    <!-- AVIF format -->
+                    <source srcset="pics/m1.png?as=avif&width=320 320w,
                             pics/m1.png?as=avif&width=480 480w,
-                            pics/m1.png?as=avif&width=800 800w"
-                    sizes="(max-width: 600px) 320px,
+                            pics/m1.png?as=avif&width=800 800w" sizes="(max-width: 600px) 320px,
                            (max-width: 900px) 480px,
-                           800px"
-                    type="image/avif" />
-            
-                <!-- WebP format -->
-                <source
-                    srcset="pics/m1.png?as=webp&width=320 320w,
+                           800px" type="image/avif" />
+
+                    <!-- WebP format -->
+                    <source srcset="pics/m1.png?as=webp&width=320 320w,
                             pics/m1.png?as=webp&width=480 480w,
-                            pics/m1.png?as=webp&width=800 800w"
-                    sizes="(max-width: 600px) 320px,
+                            pics/m1.png?as=webp&width=800 800w" sizes="(max-width: 600px) 320px,
                            (max-width: 900px) 480px,
-                           800px"
-                    type="image/webp" />
-            
-                <!-- JPEG format -->
-                <source 
-                    srcset="pics/m1.png?width=320 320w,
+                           800px" type="image/webp" />
+
+                    <!-- JPEG format -->
+                    <source srcset="pics/m1.png?width=320 320w,
                             pics/m1.png?width=480 480w,
-                            pics/m1.png?width=800 800w"
-                    sizes="(max-width: 600px) 320px,
+                            pics/m1.png?width=800 800w" sizes="(max-width: 600px) 320px,
                            (max-width: 900px) 480px,
-                           800px"
-                    type="image/jpeg" />
-                
-                <img src="pics/m1.png?width=800" alt="jesu moder? 1" title="jesu moder? 1" />
-            </picture>
-            <picture>
-                <!-- AVIF format -->
-                <source 
-                    srcset="pics/m2.png?as=avif&width=320 320w,
+                           800px" type="image/jpeg" />
+
+                    <img src="pics/m1.png?width=800" id="image1" alt="jesu moder? 1" title="jesu moder? 1" />
+                </picture>
+                <picture>
+                    <!-- AVIF format -->
+                    <source srcset="pics/m2.png?as=avif&width=320 320w,
                             pics/m2.png?as=avif&width=480 480w,
-                            pics/m2.png?as=avif&width=800 800w"
-                    sizes="(max-width: 600px) 320px,
+                            pics/m2.png?as=avif&width=800 800w" sizes="(max-width: 600px) 320px,
                            (max-width: 900px) 480px,
-                           800px"
-                    type="image/avif" />
-            
-                <!-- WebP format -->
-                <source
-                    srcset="pics/m2.png?as=webp&width=320 320w,
+                           800px" type="image/avif" />
+
+                    <!-- WebP format -->
+                    <source srcset="pics/m2.png?as=webp&width=320 320w,
                             pics/m2.png?as=webp&width=480 480w,
-                            pics/m2.png?as=webp&width=800 800w"
-                    sizes="(max-width: 600px) 320px,
+                            pics/m2.png?as=webp&width=800 800w" sizes="(max-width: 600px) 320px,
                            (max-width: 900px) 480px,
-                           800px"
-                    type="image/webp" />
-            
-                <!-- JPEG format -->
-                <source 
-                    srcset="pics/m2.png?width=320 320w,
+                           800px" type="image/webp" />
+
+                    <!-- JPEG format -->
+                    <source srcset="pics/m2.png?width=320 320w,
                             pics/m2.png?width=480 480w,
-                            pics/m2.png?width=800 800w"
-                    sizes="(max-width: 600px) 320px,
+                            pics/m2.png?width=800 800w" sizes="(max-width: 600px) 320px,
                            (max-width: 900px) 480px,
-                           800px"
-                    type="image/jpeg" />
-                
-                <img src="pics/m2.png?width=800" alt="jesu moder? 2" title="jesu moder? 2" />
-            </picture>
-            <picture>
-                <!-- AVIF format -->
-                <source 
-                    srcset="pics/m3.png?as=avif&width=320 320w,
+                           800px" type="image/jpeg" />
+
+                    <img src="pics/m2.png?width=800" id="image2" alt="jesu moder? 2" title="jesu moder? 2" />
+                </picture>
+                <picture>
+                    <!-- AVIF format -->
+                    <source srcset="pics/m3.png?as=avif&width=320 320w,
                             pics/m3.png?as=avif&width=480 480w,
-                            pics/m3.png?as=avif&width=800 800w"
-                    sizes="(max-width: 600px) 320px,
+                            pics/m3.png?as=avif&width=800 800w" sizes="(max-width: 600px) 320px,
                            (max-width: 900px) 480px,
-                           800px"
-                    type="image/avif" />
-            
-                <!-- WebP format -->
-                <source
-                    srcset="pics/m3.png?as=webp&width=320 320w,
+                           800px" type="image/avif" />
+
+                    <!-- WebP format -->
+                    <source srcset="pics/m3.png?as=webp&width=320 320w,
                             pics/m3.png?as=webp&width=480 480w,
-                            pics/m3.png?as=webp&width=800 800w"
-                    sizes="(max-width: 600px) 320px,
+                            pics/m3.png?as=webp&width=800 800w" sizes="(max-width: 600px) 320px,
                            (max-width: 900px) 480px,
-                           800px"
-                    type="image/webp" />
-            
-                <!-- JPEG format -->
-                <source 
-                    srcset="pics/m3.png?width=320 320w,
+                           800px" type="image/webp" />
+
+                    <!-- JPEG format -->
+                    <source srcset="pics/m3.png?width=320 320w,
                             pics/m3.png?width=480 480w,
-                            pics/m3.png?width=800 800w"
-                    sizes="(max-width: 600px) 320px,
+                            pics/m3.png?width=800 800w" sizes="(max-width: 600px) 320px,
                            (max-width: 900px) 480px,
-                           800px"
-                    type="image/jpeg" />
-                
-                <img src="pics/m3.png?width=800" alt="jesu moder? 3" title="jesu moder? 3" />
-            </picture>
+                           800px" type="image/jpeg" />
 
-            <picture>
-                <!-- AVIF format -->
-                <source 
-                    srcset="pics/m4.png?as=avif&width=320 320w,
+                    <img src="pics/m3.png?width=800" id="image3" alt="jesu moder? 3" title="jesu moder? 3" />
+                </picture>
+
+                <picture>
+                    <!-- AVIF format -->
+                    <source srcset="pics/m4.png?as=avif&width=320 320w,
                             pics/m4.png?as=avif&width=480 480w,
-                            pics/m4.png?as=avif&width=800 800w"
-                    sizes="(max-width: 600px) 320px,
+                            pics/m4.png?as=avif&width=800 800w" sizes="(max-width: 600px) 320px,
                            (max-width: 900px) 480px,
-                           800px"
-                    type="image/avif" />
-            
-                <!-- WebP format -->
-                <source
-                    srcset="pics/m4.png?as=webp&width=320 320w,
-                            pics/m4.png?as=webp&width=480 480w,
-                            pics/m4.png?as=webp&width=800 800w"
-                    sizes="(max-width: 600px) 320px,
-                           (max-width: 900px) 480px,
-                           800px"
-                    type="image/webp" />
-            
-                <!-- JPEG format -->
-                <source 
-                    srcset="pics/m4.png?width=320 320w,
-                            pics/m4.png?width=480 480w,
-                            pics/m4.png?width=800 800w"
-                    sizes="(max-width: 600px) 320px,
-                           (max-width: 900px) 480px,
-                           800px"
-                    type="image/jpeg" />
-                
-                <img src="pics/m4.png?width=800" alt="jesu moder? 4" title="jesu moder? 4" />
-            </picture>
+                           800px" type="image/avif" />
 
-        </div>
-        <h2>Stålmannen med ost också</h2>
-        <div class="pictureGallery">
-        <picture>
-            <!-- AVIF format -->
-            <source 
-                srcset="pics/s1.png?as=avif&width=320 320w,
+                    <!-- WebP format -->
+                    <source srcset="pics/m4.png?as=webp&width=320 320w,
+                            pics/m4.png?as=webp&width=480 480w,
+                            pics/m4.png?as=webp&width=800 800w" sizes="(max-width: 600px) 320px,
+                           (max-width: 900px) 480px,
+                           800px" type="image/webp" />
+
+                    <!-- JPEG format -->
+                    <source srcset="pics/m4.png?width=320 320w,
+                            pics/m4.png?width=480 480w,
+                            pics/m4.png?width=800 800w" sizes="(max-width: 600px) 320px,
+                           (max-width: 900px) 480px,
+                           800px" type="image/jpeg" />
+
+                    <img src="pics/m4.png?width=800" id="image4" alt="jesu moder? 4" title="jesu moder? 4" />
+                </picture>
+
+            </div>
+            <h2>Stålmannen med ost också</h2>
+            <div class="pictureGallery" id="superman">
+                <picture>
+                    <!-- AVIF format -->
+                    <source srcset="pics/s1.png?as=avif&width=320 320w,
                         pics/s1.png?as=avif&width=480 480w,
-                        pics/s1.png?as=avif&width=800 800w"
-                sizes="(max-width: 600px) 320px,
+                        pics/s1.png?as=avif&width=800 800w" sizes="(max-width: 600px) 320px,
                        (max-width: 900px) 480px,
-                       800px"
-                type="image/avif" />
-        
-            <!-- WebP format -->
-            <source
-                srcset="pics/s1.png?as=webp&width=320 320w,
+                       800px" type="image/avif" />
+
+                    <!-- WebP format -->
+                    <source srcset="pics/s1.png?as=webp&width=320 320w,
                         pics/s1.png?as=webp&width=480 480w,
-                        pics/s1.png?as=webp&width=800 800w"
-                sizes="(max-width: 600px) 320px,
+                        pics/s1.png?as=webp&width=800 800w" sizes="(max-width: 600px) 320px,
                        (max-width: 900px) 480px,
-                       800px"
-                type="image/webp" />
-        
-            <!-- JPEG format -->
-            <source 
-                srcset="pics/s1.png?width=320 320w,
+                       800px" type="image/webp" />
+
+                    <!-- JPEG format -->
+                    <source srcset="pics/s1.png?width=320 320w,
                         pics/s1.png?width=480 480w,
-                        pics/s1.png?width=800 800w"
-                sizes="(max-width: 600px) 320px,
+                        pics/s1.png?width=800 800w" sizes="(max-width: 600px) 320px,
                        (max-width: 900px) 480px,
-                       800px"
-                type="image/jpeg" />
-            
-            <img src="pics/s1.png?width=800" alt="stålman 1" title="stålman 1" />
-        </picture>
-        <picture>
-            <!-- AVIF format -->
-            <source 
-                srcset="pics/s2.png?as=avif&width=320 320w,
+                       800px" type="image/jpeg" />
+
+                    <img src="pics/s1.png?width=800" id="image5" alt="stålman 1" title="stålman 1" />
+                </picture>
+                <picture>
+                    <!-- AVIF format -->
+                    <source srcset="pics/s2.png?as=avif&width=320 320w,
                         pics/s2.png?as=avif&width=480 480w,
-                        pics/s2.png?as=avif&width=800 800w"
-                sizes="(max-width: 600px) 320px,
+                        pics/s2.png?as=avif&width=800 800w" sizes="(max-width: 600px) 320px,
                        (max-width: 900px) 480px,
-                       800px"
-                type="image/avif" />
-        
-            <!-- WebP format -->
-            <source
-                srcset="pics/s2.png?as=webp&width=320 320w,
+                       800px" type="image/avif" />
+
+                    <!-- WebP format -->
+                    <source srcset="pics/s2.png?as=webp&width=320 320w,
                         pics/s2.png?as=webp&width=480 480w,
-                        pics/s2.png?as=webp&width=800 800w"
-                sizes="(max-width: 600px) 320px,
+                        pics/s2.png?as=webp&width=800 800w" sizes="(max-width: 600px) 320px,
                        (max-width: 900px) 480px,
-                       800px"
-                type="image/webp" />
-        
-            <!-- JPEG format -->
-            <source 
-                srcset="pics/s2.png?width=320 320w,
+                       800px" type="image/webp" />
+
+                    <!-- JPEG format -->
+                    <source srcset="pics/s2.png?width=320 320w,
                         pics/s2.png?width=480 480w,
-                        pics/s2.png?width=800 800w"
-                sizes="(max-width: 600px) 320px,
+                        pics/s2.png?width=800 800w" sizes="(max-width: 600px) 320px,
                        (max-width: 900px) 480px,
-                       800px"
-                type="image/jpeg" />
-            
-            <img src="pics/s2.png?width=800" alt="stålman 2" title="stålman 2" />
-        </picture>
-    </div>
-                    
-        </section>
+                       800px" type="image/jpeg" />
+
+                    <img src="pics/s2.png?width=800" id="image6" alt="stålman 2" title="stålman 2" />
+                </picture>
+            </div>
+
+    </section>
 
 
 
@@ -246,5 +214,5 @@
         <button type="button" id="geeseButton">Gåsattack!</button>
     </footer>
 </body>
-</html>
 
+</html>
