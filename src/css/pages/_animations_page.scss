@@ -1,25 +1,36 @@
-
-  #modernFingalOlsson {
+// Tillämpar en oändligt loopande animation med autostart där varje cykel varar i 15 sekunder per cykel. Använder en linjär tidsfunktion för animationen så att den ska rulla på ohackigt.
+#modernFingalOlsson {
     animation: moveAndFlip 15s infinite;
     animation-timing-function: linear;
-
 }
+
+// Ändrar animationens varaktighet till 10 sekunder när skärmstorleken är 1000px eller mindre.
 @media (max-width: 1000px) {
     #modernFingalOlsson {
         animation: moveAndFlip 10s infinite;
         animation-timing-function: linear;
     }
-  }
-
-  #animering2 {
-    animation: hue-rotate 15s infinite alternate ease-out;
 }
 
-.animation_text
-{
+// Definierar en oändlig, alternerande "hue-rotate" animation för #animering2 som varar i 10 sekunder per cykel och har en "ease-out" tidsfunktion.
+#animering2 {
+    animation: hue-rotate 10s infinite alternate ease-out;
+}
+
+// Utökar .animation_text med layout såsom en buttom och använder en mixin som ger en slumpmässig backgrundsfärg på dessa.
+.animation_text {
     @extend button;
     @include buttonRandomColor;
-    color: $headfoot_text-color; 
-  }
+    color: $headfoot_text-color;
+}
 
+// Sätter initialbredden på #geese_attack till 0%.
+#geese_attack {
+    width: 0%;
+}
 
+// Definierar en alternerande animation vid namn "change-size" för element som har klassen .change_size_animation, med en varaktighet på 10 sekunder och en "ease-in-out" tidsfunktion.
+// Denna låter jag javascripten styra när den ska starta när den ska läggas till på geese_attack.
+.change_size_animation {
+    animation: change-size 10s alternate ease-in-out;
+}

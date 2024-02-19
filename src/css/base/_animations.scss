@@ -34,12 +34,33 @@
 @keyframes hue-rotate {
     0% {
         filter: hue-rotate(0deg);
+        /* Startposition, börjar "normal"*/
     }
 
     100% {
         filter: hue-rotate(360deg);
+        /* Slutposition, roterat 360 grader så är tillbaka till startutseendet igen*/
     }
 }
+
+
+@keyframes change-size {
+
+    //ändrar storlek på elementet och återgår till ursprunglig storlek (som är ingenting)
+    0% {
+        width: 0%;
+    }
+
+    30% {
+        width: 100%;
+    }
+
+    0% {
+        width: 0%;
+    }
+
+}
+
 
 
 // Path: src/css/base/_animations.scss
