@@ -1,0 +1,45 @@
+@keyframes moveAndFlip {
+
+    0%,
+    100% {
+        transform: translateX(0) scaleX(-1);
+        /* Startposition, spegelvänd från början */
+    }
+
+    45% {
+        transform: translateX(100vw) scaleX(-1);
+        /* Rör sig åt höger utan att spegelvändas */
+    }
+
+    50% {
+        transform: translateX(100vw) scaleX(1);
+        /* Spegelvänder sig */
+        //ökar till dubbel storlek
+
+    }
+
+    85% {
+        transform: translateX(-20vw) scaleX(1);
+        /* Återgår till startpositionen spegelvänd */
+    }
+
+    90% {
+        transform: translateX(-20vw) scaleX(-1);
+        /* För att säkerställa en mjuk loop, återställ till ursprungligt tillstånd */
+    }
+
+}
+
+
+@keyframes hue-rotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+// Path: src/css/base/_animations.scss
