@@ -1,7 +1,9 @@
-// Base styles
+// Base styles variables and mixins and animations are imported first
 @import 'base/variables';
 @import 'base/mixins';
 @import 'base/reset';
+@import 'base/animations';
+
 
 // Components
 @import 'components/buttons';
@@ -12,6 +14,8 @@
 
 // Pages
 @import 'pages/css';
+@import 'pages/animations_page';
+
 
 // Themes
 @import 'themes/darkmode';

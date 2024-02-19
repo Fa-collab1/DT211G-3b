@@ -1,0 +1,25 @@
+
+  #modernFingalOlsson {
+    animation: moveAndFlip 15s infinite;
+    animation-timing-function: linear;
+
+}
+@media (max-width: 1000px) {
+    #modernFingalOlsson {
+        animation: moveAndFlip 10s infinite;
+        animation-timing-function: linear;
+    }
+  }
+
+  #animering2 {
+    animation: hue-rotate 15s infinite alternate ease-out;
+}
+
+.animation_text
+{
+    @extend button;
+    @include buttonRandomColor;
+    color: $headfoot_text-color; 
+  }
+
+

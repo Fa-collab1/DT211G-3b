@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animering</title>
+    <link rel="stylesheet" href="css/main.scss">
+    <script src="js/js.js" defer></script>
+
+</head>
+
+<body>
+    <main>
+        <div class="pagecontent">
+            <header>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Hem</a></li>
+                        <li><a href="sass.html">SASS</a></li>
+                        <li><a href="animering.html" class="activepagemarker">Animering</a></li>
+                        <li><a href="diagram.html">Diagram</a></li>
+                        <li><a href="karta.html">Karta</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section class="ingress">
+                <h1>En sida med 3 olika animeringar</h1>
+            </section>
+            <section class="animation_example">
+                <h2>Animering 1</h2>
+                <p class="animation_text">Precis som Fingal Olsson!</p>
+                <br>
+            
+                <picture>
+                    <!-- PNG-format -->
+                    <source srcset="pics/modernFingalOlsson.png?as=png&width=120 320w,
+                                    pics/modernFingalOlsson.png?as=png&width=180 480w,
+                                    pics/modernFingalOlsson.png?as=png&width=300 800w" 
+                            sizes="(max-width: 600px) 320px,
+                                   (max-width: 900px) 480px,
+                                   800px" 
+                            type="image/png" />
+                
+                    <img src="pics/modernFingalOlsson.png?width=800" id="modernFingalOlsson" alt="Modern Fingal Olsson" title="Modern Fingal Olsson">
+                </picture>
+                
+            
+            </section>
+            <section class="animation_example">
+                <h2>Animering 2</h2>
+                <p class="animation_text">Automatisk förändring av Hue i en bild</p>
+              
+                <picture>
+                    <!-- AVIF format -->
+                    <source srcset="pics/ost3.png?as=avif&width=320 320w,
+                    pics/ost3.png?as=avif&width=480 480w,
+                    pics/ost3.png?as=avif&width=800 800w" sizes="(max-width: 600px) 320px,
+                   (max-width: 900px) 480px,
+                   800px" type="image/avif" />
+
+                    <!-- WebP format -->
+                    <source srcset="pics/ost3.png?as=webp&width=320 320w,
+                    pics/ost3.png?as=webp&width=480 480w,
+                    pics/ost3.png?as=webp&width=800 800w" sizes="(max-width: 600px) 320px,
+                   (max-width: 900px) 480px,
+                   800px" type="image/webp" />
+
+                    <!-- JPEG format -->
+                    <source srcset="pics/ost3.png?width=320 320w,
+                    pics/ost3.png?width=480 480w,
+                    pics/ost3.png?width=800 800w" sizes="(max-width: 600px) 320px,
+                   (max-width: 900px) 480px,
+                   800px" type="image/jpeg" />
+
+                    <img src="pics/ost3.png?width=800" id="animering2" alt="ostbricka 3"
+                        title="ostbricka 3" />
+                </picture>
+            </section>
+            <section class="animation_example">
+                <h2>Animering 3</h2>
+                <p class="animation_text">Tryck på andknapparna...</p>
+            </section>
+
+
+        </div>
+            <footer>
+                <p>&copy; 2024 Jonas Nilsson</p>
+                <button type="button" id="duckButton">And</button>
+                <button type="button" id="ducksButton">Änder</button>
+                <button type="button" id="helpButton">Hjälp!</button>
+                <button type="button" id="geeseButton">Gåsattack!</button>
+            </footer>
+        
+
+    </main>
+</body>
+
+</html>
