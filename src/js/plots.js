@@ -86,8 +86,10 @@ function renderBarChart(barLabels, barDataPoints) {
                 label: '#sökande', // Titeln för datasetet som visas i diagrammets legend.
                 data: barDataPoints, // Data för varje stapel, baserat på barDataPoints-arrayen.
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)' // Färgen på staplarna.
+                    'rgba(255, 99, 132, 0.8)' // Färgen på staplarna.
                 ],
+                hoverBackgroundColor: 'rgba(250, 10, 79, 0.9)', // Hoverfärgen
+
                 borderColor: [
                     'rgba(255, 99, 132, 1)' // Färgen på staplarnas kant.
                 ],
