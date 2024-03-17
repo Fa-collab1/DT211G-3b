@@ -5,10 +5,10 @@
     if (event.key === 'Enter') {
         goToPlace();
     }
-});*/
+});
 // Add an event listener to the button element
 document.getElementById('searchButton').addEventListener('click', goToPlace);
-
+*/
 
 
 // Startar Leaflet map, börjar med en tom karta (eller rättare sagt en full världskarta)
