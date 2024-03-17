@@ -6,15 +6,24 @@ async function fetchData() {
     const data = await response.json(); // Förutsätter att servern returnerar JSON
     data.sort((a, b) => b.applicantsTotal - a.applicantsTotal);
 
-//tar fram namn på kurserna och antal sökande
-    const barLabels = data.map(item => item.name).slice(0, 6); 
-    const barDataPoints = data.map(item => item.applicantsTotal).slice(0, 6);
+//tar fram data för stapeldiagrammet
+// Först filtrerar vi ut element där item.type är "Kurs".
+const kurser = data.filter(item => item.type === "Kurs");
+// Sedan tar vi fram namn på kurserna och antal sökande, men endast för de filtrerade elementen.
+const barLabels = kurser.map(item => item.name).slice(0, 6);
+const barDataPoints = kurser.map(item => item.applicantsTotal).slice(0, 6);
 
-    renderChart(barLabels, barDataPoints);
+    renderBarChart(barLabels, barDataPoints);
 }
 
 
-function renderChart(barLabels, barDataPoints) {
+
+
+
+
+
+
+function renderBarChart(barLabels, barDataPoints) {
     // Hämtar canvas-elementet där diagrammet ska visas, och förbereder det för 2d-ritning.
     const ctx = document.getElementById('barChart').getContext('2d');
     // Skapar ett nytt stapeldiagram med Chart.js.
