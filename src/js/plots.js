@@ -1,7 +1,7 @@
 'use strict';
 const dataURL = 'https://studenter.miun.se/~mallar/dt211g/';
 
-async function fetchData() {
+async function generateGraphs() {
     const response = await fetch(dataURL);
     const data = await response.json(); // Förutsätter att servern returnerar JSON
     data.sort((a, b) => b.applicantsTotal - a.applicantsTotal);
@@ -144,4 +144,4 @@ function renderBarChart(barLabels, barDataPoints) {
 
 
 
-fetchData();
+generateGraphs();
