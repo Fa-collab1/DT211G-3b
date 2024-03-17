@@ -1,11 +1,11 @@
 'use strict';
 
 // lägger till en eventlistener för att kunna söka på platsen om man trycker enter i sökfältet
-document.getElementById('searchInput').addEventListener('keypress', function (event) {
+/*document.getElementById('searchInput').addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {
         goToPlace();
     }
-});
+});*/
 // Add an event listener to the button element
 document.getElementById('searchButton').addEventListener('click', goToPlace);
 
