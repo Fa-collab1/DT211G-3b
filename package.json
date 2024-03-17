@@ -19,7 +19,7 @@
     "netlify-cli": "^17.15.1",
     "parcel": "^2.11.0",
     "sass": "^1.70.0",
-    "sharp": "^0.33.2"
+    "sharp": "^0.31.1"
   },
   "browserslist": [
     "> 0.5%",
