@@ -1,0 +1,369 @@
+$background-color: rgb(193, 247, 229);
+$headfoot-color: #5b4242;
+$headfoot_text-color: #fff;
+$text-color: rgb(46, 10, 46);
+$picture_border_color: black;
+
+$background-color-darkmode: invert($background-color);
+$headfoot-color-darkmode: invert($headfoot-color);
+$headfoot_text-color-darkmode: invert($headfoot_text-color);
+$text-color-darkmode: invert($text-color);
+
+
+@mixin randomPictureEffect {
+
+
+    $randomvalue: random(3);
+
+    @if $randomvalue ==1 {
+        transition: filter 2s ease;
+        filter: saturate(2000%);
+    }
+
+    @else if $randomvalue ==2 {
+        transition: filter 2s ease;
+        filter: sepia(100%);
+    }
+
+    @else {
+        transition: filter 100s ease;
+        filter: hue-rotate(7200deg);
+    }
+}
+
+:root {
+    background-color: $background-color;
+    color: $text-color;
+    --button-state: "start";
+    font-size: 1.3em;
+}
+
+
+h1 {
+    font-size: 3em;
+    margin: 0.5em;
+}
+
+.ingress {
+    text-align: center;
+    padding-bottom: 3vh;
+}
+
+
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 0.5em;
+}
+
+
+.pictureGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    picture {
+        img {
+            border: $picture_border_color solid 3px;
+
+        }
+    }
+
+}
+
+
+
+#image1:hover {
+    @include randomPictureEffect;
+}
+
+#image2:hover {
+    @include randomPictureEffect;
+}
+
+#image3:hover {
+    @include randomPictureEffect;
+}
+
+#image4:hover {
+    @include randomPictureEffect;
+}
+
+#image5:hover {
+    @include randomPictureEffect;
+}
+
+#image6:hover {
+    @include randomPictureEffect;
+}
+
+#imageCheesePlate1:hover {
+    @include randomPictureEffect;
+}
+
+#imageCheesePlate2:hover {
+    @include randomPictureEffect;
+}
+
+#imageCheesePlate3:hover {
+    @include randomPictureEffect;
+}
+
+#imageCheesePlate4:hover {
+    @include randomPictureEffect;
+}
+
+#imageCheesePlate5:hover {
+    @include randomPictureEffect;
+}
+
+#imageCheesePlate6:hover {
+    @include randomPictureEffect;
+}
+
+#imageCheesePlate7:hover {
+    @include randomPictureEffect;
+}
+
+#imageCheesePlate8:hover {
+    @include randomPictureEffect;
+}
+
+
+* {
+    box-sizing: border-box;
+    max-width: 100vw;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.pagecontent {
+    min-height: 95.5vh;
+}
+
+header,
+footer {
+    text-align: center;
+    padding: 1em;
+
+    *,
+    & {
+        background-color: $headfoot-color;
+        color: $headfoot_text-color;
+    }
+
+    nav {
+        ul {
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                display: inline;
+                margin: 0 3vw;
+
+                a {
+                    text-decoration: none;
+                    font-size: 2.5vw;
+                    font-weight: bold;
+                    padding: 1vw;
+                    margin: 1vw;
+                    border-radius: 50%;
+                    background-color: lighten($headfoot-color, 10%) !important;
+
+                    &:hover {
+                        background-color: lighten($headfoot-color, 30%) !important;
+                        text-decoration: underline;
+                    }
+
+                    &:active {
+                        @extend .activepagemarker;
+                        background-color: lighten($headfoot-color, 50%) !important;
+                        text-decoration: underline;
+                        color: invert($headfoot_text-color);
+                    }
+                }
+
+                .activepagemarker {
+                    border: $headfoot_text-color 2px solid;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    max-height: 4.5vh;
+
+    * {
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+
+
+
+main {
+
+    padding: 0.2vw;
+}
+
+
+
+
+
+
+@mixin buttonRandomColor($buttonType1or2: 1) {
+
+    background-color: hsl(random(360), 30%, 30%);
+    cursor: pointer;
+    margin: 5px;
+    display: inline-block;
+
+    @if $buttonType1or2 ==1 {
+        border: none;
+    }
+
+    @else {
+        border: solid 2px black;
+
+    }
+}
+
+#duckButton {
+    @include buttonRandomColor;
+}
+
+#ducksButton {
+    @include buttonRandomColor;
+}
+
+#helpButton {
+    @include buttonRandomColor;
+}
+
+#geeseButton {
+    @include buttonRandomColor(2);
+}
+
+button:hover {
+    transform: scale(1.16);
+
+}
+
+button:active {
+    transform: scale(1.3);
+
+}
+
+#sessContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    margin: 1vw;
+    padding: 1vw;
+    background-color: #f0f0f0;
+    border-radius: 1em;
+    box-shadow: 0 0 1em 0.5em #f0f0f0;
+    max-width: 100%;
+    /* Lägg till denna egenskap för att sätta en maximal bredd */
+    overflow: hidden;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    #sessText {
+        padding: 1em;
+        min-width: 50%;
+    }
+
+    .sessCheesPictureGallery {
+        max-width: 20%;
+        margin: 0;
+        padding: 0;
+        border: solid 0.2vw $background-color;
+    }
+}
+
+#imageCheesePlate5,
+#imageCheesePlate6,
+#imageCheesePlate7,
+#imageCheesePlate8 {
+    display: none;
+}
+
+
+
+@media (max-width: 1800px) {
+
+    #imageCheesePlate5,
+    #imageCheesePlate6 {
+        display: block;
+    }
+}
+
+
+@media (max-width: 1500px) {
+
+    #imageCheesePlate7,
+    #imageCheesePlate8 {
+        display: block;
+    }
+}
+
+
+@media (max-width: 1000px) {
+
+    nav ul li a {
+        font-size: 1em !important;
+        margin: 0 !important;
+    }
+
+    .sessCheesPictureGallery {
+        display: none;
+    }
+
+
+}
+
+
+
+
+@media (max-width: 800px) {
+
+    nav ul li a {
+        display: block;
+        padding: 0.7vw !important;
+        margin: 0 30% 0 30% !important;
+        font-size: 1.5em !important;
+    }
+}
+
+
+
+//darkmode preferences
+@media (prefers-color-scheme: dark) {
+    * {
+        background-color: $background-color-darkmode;
+        color: $text-color-darkmode;
+    }
+
+    .sessCheesPictureGallery {
+        border: solid 0.2vw $background-color-darkmode !important;
+    }
+
+
+
+}
