@@ -31,8 +31,6 @@
 
             <section class="ingress">
                 <h1>Visuell presentation av valfri geografisk plats på en karta</h1>
-                <p>Visuell presentation av valfri geografisk plats på en karta med FetchAPI-anrop tillsammans med
-                    async/await.</p>
                 <p>Det ska finnas ett textfält någonstans på sidan där användaren kan skriva in en plats.
                     Vid val av plats ska AJAX-anrop (Fetch, Import eller motsvarande till extern källa) göras till vald
                     karttjänst.
@@ -41,8 +39,8 @@
               
                 <input type="text" id="searchInput" placeholder="Ange en ort">
                 <button id="searchButton">Sök</button>
+                <div id="map"></div>
                 <div id="placeName"></div> <!-- Placeholder för visning av hittad ort efter sökning skett -->
-                <div id="map" style="height: 900px;width: 100%;"></div>
 
             </section>
 
