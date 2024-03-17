@@ -15,10 +15,11 @@
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.11.0",
+    "@parcel/watcher": "^2.4.1",
     "netlify-cli": "^17.15.1",
     "parcel": "^2.11.0",
     "sass": "^1.70.0",
-    "sharp": "^0.31.3"
+    "sharp": "^0.33.2"
   },
   "browserslist": [
     "> 0.5%",
