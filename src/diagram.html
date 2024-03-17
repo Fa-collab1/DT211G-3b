@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SASS</title>
+    <title>Diagram</title>
     <link rel="stylesheet" href="css/main.scss">
     <script src="js/js.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+
 
 </head>
 
@@ -26,288 +28,23 @@
             </header>
 
             <section class="ingress">
-                <h1>Utvärdering av mitt arbete med SASS</h1>
-                <p>Genom att använda SASS nu för första gången så har jag stött på flera fördelar och några nackdelar.
-                </p>
+                <h1>Två diagram för MiUn:s antagningsstatistik</h1>
+                <p>Visuell presentation av data från extern källa med FetchAPI-anrop tillsammans med async/await.</p>
+                
             </section>
-            <div id="sassContainer">
-                <div class="sassCheesPictureGallery">
-                    <picture>
-                        <!-- AVIF format -->
-                        <source srcset="pics/ost1.png?as=avif&width=320 320w,
-                        pics/ost1.png?as=avif&width=480 480w,
-                        pics/ost1.png?as=avif&width=800 800w" sizes="(max-width: 600px) 320px,
-                       (max-width: 900px) 480px,
-                       800px" type="image/avif" />
-
-                        <!-- WebP format -->
-                        <source srcset="pics/ost1.png?as=webp&width=320 320w,
-                        pics/ost1.png?as=webp&width=480 480w,
-                        pics/ost1.png?as=webp&width=800 800w" sizes="(max-width: 600px) 320px,
-                       (max-width: 900px) 480px,
-                       800px" type="image/webp" />
-
-                        <!-- JPEG format -->
-                        <source srcset="pics/ost1.png?width=320 320w,
-                        pics/ost1.png?width=480 480w,
-                        pics/ost1.png?width=800 800w" sizes="(max-width: 600px) 320px,
-                       (max-width: 900px) 480px,
-                       800px" type="image/jpeg" />
-
-                        <img src="pics/ost1.png?width=800" id="imageCheesePlate1" alt="ostbricka 1"
-                            title="ostbricka 1" />
-                    </picture>
-                    <picture>
-                        <!-- AVIF format -->
-                        <source srcset="pics/ost3.png?as=avif&width=320 320w,
-                        pics/ost3.png?as=avif&width=480 480w,
-                        pics/ost3.png?as=avif&width=800 800w" sizes="(max-width: 600px) 320px,
-                       (max-width: 900px) 480px,
-                       800px" type="image/avif" />
-
-                        <!-- WebP format -->
-                        <source srcset="pics/ost3.png?as=webp&width=320 320w,
-                        pics/ost3.png?as=webp&width=480 480w,
-                        pics/ost3.png?as=webp&width=800 800w" sizes="(max-width: 600px) 320px,
-                       (max-width: 900px) 480px,
-                       800px" type="image/webp" />
-
-                        <!-- JPEG format -->
-                        <source srcset="pics/ost3.png?width=320 320w,
-                        pics/ost3.png?width=480 480w,
-                        pics/ost3.png?width=800 800w" sizes="(max-width: 600px) 320px,
-                       (max-width: 900px) 480px,
-                       800px" type="image/jpeg" />
-
-                        <img src="pics/ost3.png?width=800" id="imageCheesePlate3" alt="ostbricka 3"
-                            title="ostbricka 3" />
-                    </picture>
-                    <picture>
-                        <!-- AVIF format -->
-                        <source srcset="pics/ost5.png?as=avif&width=320 320w,
-                pics/ost5.png?as=avif&width=480 480w,
-                pics/ost5.png?as=avif&width=800 800w" sizes="(max-width: 600px) 320px,
-               (max-width: 900px) 480px,
-               800px" type="image/avif" />
-
-                        <!-- WebP format -->
-                        <source srcset="pics/ost5.png?as=webp&width=320 320w,
-                pics/ost5.png?as=webp&width=480 480w,
-                pics/ost5.png?as=webp&width=800 800w" sizes="(max-width: 600px) 320px,
-               (max-width: 900px) 480px,
-               800px" type="image/webp" />
-
-                        <!-- JPEG format -->
-                        <source srcset="pics/ost5.png?width=320 320w,
-                pics/ost5.png?width=480 480w,
-                pics/ost5.png?width=800 800w" sizes="(max-width: 600px) 320px,
-               (max-width: 900px) 480px,
-               800px" type="image/jpeg" />
-
-                        <img src="pics/ost5.png?width=800" id="imageCheesePlate5" alt="ostbricka 5"
-                            title="ostbricka 5" />
-                    </picture>
-
-                    <picture>
-                        <!-- AVIF format -->
-                        <source srcset="pics/ost7.png?as=avif&width=320 320w,
-                pics/ost7.png?as=avif&width=480 480w,
-                pics/ost7.png?as=avif&width=800 800w" sizes="(max-width: 600px) 320px,
-               (max-width: 900px) 480px,
-               800px" type="image/avif" />
-
-                        <!-- WebP format -->
-                        <source srcset="pics/ost7.png?as=webp&width=320 320w,
-                pics/ost7.png?as=webp&width=480 480w,
-                pics/ost7.png?as=webp&width=800 800w" sizes="(max-width: 600px) 320px,
-               (max-width: 900px) 480px,
-               800px" type="image/webp" />
-
-                        <!-- JPEG format -->
-                        <source srcset="pics/ost7.png?width=320 320w,
-                pics/ost7.png?width=480 480w,
-                pics/ost7.png?width=800 800w" sizes="(max-width: 600px) 320px,
-               (max-width: 900px) 480px,
-               800px" type="image/jpeg" />
-
-                        <img src="pics/ost7.png?width=800" id="imageCheesePlate7" alt="ostbricka 7"
-                            title="ostbricka 7" />
-                    </picture>
-                </div>
-                <div id="sassText">
-                    <section>
-                        <h2>Fördelar med SASS</h2>
-                        <p>En av de mest framträdande fördelarna med SASS är möjligheten att använda variabler för att
-                            lagra
-                            värden och kunna skriva mer regelrätt kod. Detta gör det enkelt att upprätthålla och ändra
-                            designstilar på ett konsistent sätt. Genom att använda nästlade selektorer i SASS kan jag
-                            organisera
-                            min CSS-kod på ett mer hierarkiskt sätt, vilket ökar läsbarheten och minskar risken för
-                            kollisioner
-                            mellan olika stilar.</p>
-                        <p> Mixins och extend är roliga verktyg i SASS, även om jag inte hittade så många
-                            lämpliga objekt att använda dem på i denna enkla webbplats, som gör det möjligt att
-                            återanvända
-                            och
-                            dela CSS-egenskaper mellan olika regeluppsättningar, vilket minskar kodupprepning och ökar
-                            effektiviteten. Det är också väldigt bra att man få en felsökare för den CSS/SCSS-kod som
-                            man skriver. I vanlig CSS är det svårt att märka direkt om man glömt hakar etc. Här stannar
-                            det.</p>
+            <section>
+                <h2>Stapeldiagram</h2>
+                <p>Ska visa statistik över de 6 mest sökta kurserna på Mittuniverstetet, HT23. Namn på
+                    kurs och totalt antal sökande ska framgå i diagrammet.</p>
 
 
-                    </section>
-                    <section>
-                        <h2>Nackdelar med SASS</h2>
-                        <p>Att komma igång med SASS var inte så svårt då vanlig CSS också är giltig, så man behöver inte
-                            ändra
-                            allt gällande hur man jobbar på en gång utan kan det enkelt i etapper.</p>
-
-                        <p>En av de största nackdelarna med SASS är att det kräver en kompilator för att konvertera
-                            SASS-filer
-                            till vanlig CSS, men det går ju faktiskt smidigt att sätta upp Parcel etc. (men jag kan väl
-                            inte
-                            säga att jag ritkigt förstår vad som händer egentligen mer än att det fungerar)</p>
-                        <p>Variablerna kändes inte helt varierbara, de låses vid kompilering så det känns som om det
-                            finns många tillfällen som man hellre vill använda de "vanliga" css-variablerna. Jag tror
-                            att det hade varit smartare använda sig av de vanliga css-variablerna för färgförändringarna
-                            vid ljust och mörkt läge t.ex.</p>
-                            <p>Det var inte lätt att få till en uppladdning till netlify, vet inte varför det alltid krånglar, men det känns som om det inte "tar" riktigt jämt då man installerar tillägg alltid, det blir mycket googlande i den fasen. Krångligare den här gången än tidigare, men det går ju att få till till slut iallafall.</p>
-
-                        <section>
-                            <h2>Lärdomar och utmaningar</h2>
-                            <p>Jag tycker att jag lärt mig en del om att strukturera min CSS-kod lite bättre, vilket är
-                                bra.
-                                (för
-                                det brukar vara extremt rörigt och svårt att hitta i långa css-filer.)</p>
-                            <p>Jag har också lärt mig att använda mer modulär kod och att hålla min CSS baserad på
-                                komponenter.
-                                En
-                                av de största utmaningarna med SASS är nog att det är lätt hänt att man vill använda
-                                allt roligt
-                                och
-                                så kanske det blir onödigt komplicerat istället för att det förenklar. Men det som
-                                fastnar mest av denna övning är att det här ska det bli kul att lära sig mer om!</p>
-                            <p>Nästa gång så ska jag börja med partialsstrukturen. Den borde bli bättre om man tänker
-                                rätt från början. Nu började jag titta på den biten sist av allt, det var inte helt
-                                smart.</p>
-                            <p>*) Bilderna är AI-genererade</p>
-
-                        </section>
-                    </section>
-
-
-
-
-                </div>
-                <div class="sassCheesPictureGallery">
-                    <picture>
-                        <!-- AVIF format -->
-                        <source srcset="pics/ost2.png?as=avif&width=320 320w,
-                pics/ost2.png?as=avif&width=480 480w,
-                pics/ost2.png?as=avif&width=800 800w" sizes="(max-width: 600px) 320px,
-               (max-width: 900px) 480px,
-               800px" type="image/avif" />
-
-                        <!-- WebP format -->
-                        <source srcset="pics/ost2.png?as=webp&width=320 320w,
-                pics/ost2.png?as=webp&width=480 480w,
-                pics/ost2.png?as=webp&width=800 800w" sizes="(max-width: 600px) 320px,
-               (max-width: 900px) 480px,
-               800px" type="image/webp" />
-
-                        <!-- JPEG format -->
-                        <source srcset="pics/ost2.png?width=320 320w,
-                pics/ost2.png?width=480 480w,
-                pics/ost2.png?width=800 800w" sizes="(max-width: 600px) 320px,
-               (max-width: 900px) 480px,
-               800px" type="image/jpeg" />
-
-                        <img src="pics/ost2.png?width=800" id="imageCheesePlate2" alt="ostbricka 2"
-                            title="ostbricka 2" />
-                    </picture>
-                    <picture>
-                        <!-- AVIF format -->
-                        <source srcset="pics/ost4.png?as=avif&width=320 320w,
-                pics/ost4.png?as=avif&width=480 480w,
-                pics/ost4.png?as=avif&width=800 800w" sizes="(max-width: 600px) 320px,
-               (max-width: 900px) 480px,
-               800px" type="image/avif" />
-
-                        <!-- WebP format -->
-                        <source srcset="pics/ost4.png?as=webp&width=320 320w,
-                pics/ost4.png?as=webp&width=480 480w,
-                pics/ost4.png?as=webp&width=800 800w" sizes="(max-width: 600px) 320px,
-               (max-width: 900px) 480px,
-               800px" type="image/webp" />
-
-                        <!-- JPEG format -->
-                        <source srcset="pics/ost4.png?width=320 320w,
-                pics/ost4.png?width=480 480w,
-                pics/ost4.png?width=800 800w" sizes="(max-width: 600px) 320px,
-               (max-width: 900px) 480px,
-               800px" type="image/jpeg" />
-
-                        <img src="pics/ost4.png?width=800" id="imageCheesePlate4" alt="ostbricka 4"
-                            title="ostbricka 4" />
-                    </picture>
-                    <picture>
-                        <!-- AVIF format -->
-                        <source srcset="pics/ost6.png?as=avif&width=320 320w,
-                pics/ost6.png?as=avif&width=480 480w,
-                pics/ost6.png?as=avif&width=800 800w" sizes="(max-width: 600px) 320px,
-               (max-width: 900px) 480px,
-               800px" type="image/avif" />
-
-                        <!-- WebP format -->
-                        <source srcset="pics/ost6.png?as=webp&width=320 320w,
-                pics/ost6.png?as=webp&width=480 480w,
-                pics/ost6.png?as=webp&width=800 800w" sizes="(max-width: 600px) 320px,
-               (max-width: 900px) 480px,
-               800px" type="image/webp" />
-
-                        <!-- JPEG format -->
-                        <source srcset="pics/ost6.png?width=320 320w,
-                pics/ost6.png?width=480 480w,
-                pics/ost6.png?width=800 800w" sizes="(max-width: 600px) 320px,
-               (max-width: 900px) 480px,
-               800px" type="image/jpeg" />
-
-                        <img src="pics/ost6.png?width=800" id="imageCheesePlate6" alt="ostbricka 6"
-                            title="ostbricka 6" />
-                    </picture>
-
-                    <picture>
-                        <!-- AVIF format -->
-                        <source srcset="pics/ost8.png?as=avif&width=320 320w,
-                pics/ost8.png?as=avif&width=480 480w,
-                pics/ost8.png?as=avif&width=800 800w" sizes="(max-width: 600px) 320px,
-               (max-width: 900px) 480px,
-               800px" type="image/avif" />
-
-                        <!-- WebP format -->
-                        <source srcset="pics/ost8.png?as=webp&width=320 320w,
-                pics/ost8.png?as=webp&width=480 480w,
-                pics/ost8.png?as=webp&width=800 800w" sizes="(max-width: 600px) 320px,
-               (max-width: 900px) 480px,
-               800px" type="image/webp" />
-
-                        <!-- JPEG format -->
-                        <source srcset="pics/ost8.png?width=320 320w,
-                pics/ost8.png?width=480 480w,
-                pics/ost8.png?width=800 800w" sizes="(max-width: 600px) 320px,
-               (max-width: 900px) 480px,
-               800px" type="image/jpeg" />
-
-                        <img src="pics/ost8.png?width=800" id="imageCheesePlate8" alt="ostbricka 8"
-                            title="ostbricka 8" />
-                    </picture>
-                </div>
-
-
-            </div>
-
-
+            </section>
+            <section>
+                <h2>Cirkeldiagram</h2>
+                <p>Ska visa statistik över de 5 mest sökta programmen på Mittuniverstetet, HT23. Namn på program och totalt antal sökande ska framgå i diagrammet.</p>
+            </section>
         </div>
+
 
         <footer>
             <p>&copy; 2024 Jonas Nilsson</p>
