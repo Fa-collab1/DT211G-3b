@@ -6,21 +6,21 @@ async function generateGraphs() {
     const data = await response.json(); // Förutsätter att servern returnerar JSON
     data.sort((a, b) => b.applicantsTotal - a.applicantsTotal);
 
-//tar fram data för stapeldiagrammet
-// Först filtrerar vi ut element där item.type är "Kurs".
-const kurser = data.filter(item => item.type === "Kurs");
-// Sedan tar vi fram namn på kurserna och antal sökande, men endast för de filtrerade elementen.
-const barLabels = kurser.map(item => item.name).slice(0, 6);
-const barDataPoints = kurser.map(item => item.applicantsTotal).slice(0, 6);
+    //tar fram data för stapeldiagrammet
+    // Först filtrerar vi ut element där item.type är "Kurs".
+    const kurser = data.filter(item => item.type === "Kurs");
+    // Sedan tar vi fram namn på kurserna och antal sökande, men endast för de filtrerade elementen.
+    const barLabels = kurser.map(item => item.name).slice(0, 6);
+    const barDataPoints = kurser.map(item => item.applicantsTotal).slice(0, 6);
 
     renderBarChart(barLabels, barDataPoints);
 
-//tar fram data för cirkeldiagrammet
-// Först filtrerar vi ut element där item.type är "Program".
-const program = data.filter(item => item.type === "Program");
-// Sedan tar vi fram namn på kurserna och antal sökande, men endast för de filtrerade elementen.
-const pieLabels = program.map(item => item.name).slice(0, 5);
-const pieDataPoints = program.map(item => item.applicantsTotal).slice(0, 5);
+    //tar fram data för cirkeldiagrammet
+    // Först filtrerar vi ut element där item.type är "Program".
+    const program = data.filter(item => item.type === "Program");
+    // Sedan tar vi fram namn på kurserna och antal sökande, men endast för de filtrerade elementen.
+    const pieLabels = program.map(item => item.name).slice(0, 5);
+    const pieDataPoints = program.map(item => item.applicantsTotal).slice(0, 5);
 
     renderPieChart(pieLabels, pieDataPoints);
 
@@ -29,7 +29,7 @@ const pieDataPoints = program.map(item => item.applicantsTotal).slice(0, 5);
 function renderPieChart(pieLabels, pieDataPoints) {
     // Hämtar canvas-elementet där diagrammet ska visas.
     const ctx = document.getElementById('pieChart').getContext('2d');
-    
+
     // Skapar ett nytt cirkeldiagram.
     const pieChart = new Chart(ctx, {
         type: 'pie', // Ange typen av diagram till 'pie' för cirkeldiagram.
