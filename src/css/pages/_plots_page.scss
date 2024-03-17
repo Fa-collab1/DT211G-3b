@@ -1,5 +1,37 @@
 .plotSection {
   display: flex;
-  flex-direction: column;
   text-align: center;
+  align-items: center;
+
   }
+#plot1 {
+  width: 60%;
+  padding-right: 10vw;
+ }
+
+ #plot2 {
+  width: 30%;
+  padding-left: 10vw;
+ }
+
+ @media screen and (max-width: 2300px) {
+  .plot {
+    padding-left: 1vw !important;
+  }
+ }
+
+
+
+
+ @media screen and (max-width: 1300px) {
+  .plotSection {
+    flex-direction: column;
+  }
+  #plot1 {
+    width: 100%;
+  }
+  #plot2 {
+    width: 80%;
+  }
+  
+ }
