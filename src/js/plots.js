@@ -14,8 +14,59 @@ const barLabels = kurser.map(item => item.name).slice(0, 6);
 const barDataPoints = kurser.map(item => item.applicantsTotal).slice(0, 6);
 
     renderBarChart(barLabels, barDataPoints);
+
+//tar fram data för cirkeldiagrammet
+// Först filtrerar vi ut element där item.type är "Program".
+const program = data.filter(item => item.type === "Program");
+// Sedan tar vi fram namn på kurserna och antal sökande, men endast för de filtrerade elementen.
+const pieLabels = program.map(item => item.name).slice(0, 5);
+const pieDataPoints = program.map(item => item.applicantsTotal).slice(0, 5);
+
+    renderPieChart(pieLabels, pieDataPoints);
+
 }
 
+function renderPieChart(pieLabels, pieDataPoints) {
+    // Hämtar canvas-elementet där diagrammet ska visas.
+    const ctx = document.getElementById('pieChart').getContext('2d');
+    
+    // Skapar ett nytt cirkeldiagram.
+    const pieChart = new Chart(ctx, {
+        type: 'pie', // Ange typen av diagram till 'pie' för cirkeldiagram.
+        data: {
+            labels: pieLabels, // Använder pieLabels för etiketterna i cirkeldiagrammet.
+            datasets: [{
+                label: '#sökande', // Beskrivning av datamängden.
+                data: pieDataPoints, // Data för varje "skiva" i cirkeldiagrammet.
+                backgroundColor: [ // Olika färger för varje "skiva".
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(54, 162, 235, 0.6)',
+                    'rgba(255, 206, 86, 0.6)',
+                    'rgba(75, 192, 192, 0.6)',
+                    'rgba(153, 102, 255, 0.6)'
+                ],
+                borderColor: [ // Färg på kanterna för varje "skiva".
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)'
+                ],
+                borderWidth: 1 // Bredd på kanterna för varje "skiva".
+            }]
+        },
+        options: {
+            responsive: true, // Gör diagrammet responsivt.
+            legend: {
+                position: 'top', // Placering av legend (beskrivning av färger/datamängder).
+            },
+            title: {
+                display: true,
+                text: 'Antal sökande per program' // Titel på diagrammet.
+            }
+        }
+    });
+}
 
 
 
